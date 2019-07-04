@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GetOtp">
+
+
+    <TextView
+        android:id="@+id/verify_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:layout_marginTop="5dp"
+        android:text="OTP Verification"
+        android:textColor="@color/profile"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/under_path"
+        android:layout_below="@id/verify_text"
+        android:layout_marginTop="18dp"
+        >
+
+        <ImageView
+            android:id="@+id/om_img"
+            android:layout_width="248dp"
+            android:layout_height="253dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="41dp"
+            android:src="@drawable/om" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/om_img"
+            android:layout_centerHorizontal="true"
+            android:text="Enter OTP"
+            android:textColor="@color/profile"
+            android:textSize="15dp"
+            android:layout_marginTop="-15dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:text="We have sent OTP on your mobile"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/verify_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:elevation="1dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/White" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="47dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/get_opt_button_shape"
+        android:text="Verify"
+        android:textColor="@color/profile"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/under_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/under_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="272dp"
+        android:elevation="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rsz_path" />
+
+    <ImageView
+        android:id="@+id/under_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-9dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rectangle" />
+
+    <ProgressBar
+        android:id="@+id/pbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:progress="25"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

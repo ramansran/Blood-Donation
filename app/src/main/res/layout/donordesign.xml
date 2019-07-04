@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/first"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@color/White"
+        >
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/first_profile_img"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerInside"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/first_profile_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/first_profile_img"
+            android:text="Narendra Modi"
+            android:layout_toRightOf="@id/first_profile_img"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/desc_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="India"
+            android:layout_below="@id/first_profile_txt"
+            android:layout_toRightOf="@id/first_profile_img"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/become_donor_ok_btn_ask"
+            android:text="Ask For Help"
+            android:textColor="#FF1F3D"
+            android:textSize="15sp"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:background="@drawable/list_buttons"
+            android:layout_below="@id/desc_txt"
+            android:layout_toRightOf="@id/desc_txt"
+            android:layout_marginTop="5dp"
+            />
+
+        <android.support.design.widget.CoordinatorLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/White"
+            android:layout_width="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:backgroundTint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/group_txt"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="A+"
+                android:elevation="6dp"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                app:layout_anchor="@id/fab"
+                app:layout_anchorGravity="center"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

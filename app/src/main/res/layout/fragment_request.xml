@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".requestFrag">
+
+    <RelativeLayout
+        android:id="@+id/upper_box"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/profile"
+        >
+        <LinearLayout
+            android:id="@+id/first_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requests List"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"/>
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/img_profile2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="11dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/baseline_account_circle_black_48"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_request_layout"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_below="@id/first_box"
+            android:background="#ff5252"
+            android:elevation="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <LinearLayout
+                android:id="@+id/layout_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/count_request_txt"
+                    android:text="978"
+                    android:fontFamily="monospace"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/count_request_txt"
+                    android:text="Requests"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    />
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/add_resquest"
+                android:text="Add Request"
+                android:textColor="#FF1F3D"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/layout_request"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/add"
+                android:paddingLeft="15dip"
+                android:layout_marginLeft="75dp"
+                android:layout_width="180dp"
+                android:layout_height="35dp"
+                android:background="@drawable/list_buttons"
+                android:layout_marginTop="5dp"
+                />
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+<ListView
+    android:layout_below="@+id/upper_box"
+    android:id="@+id/request_List"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+</ListView>
+
+
+
+
+</RelativeLayout>

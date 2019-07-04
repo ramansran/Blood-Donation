@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DonorFrag">
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:padding="15dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donors List"
+            android:textColor="#000000"
+            android:textSize="22dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:layout_marginLeft="40dp"
+           />
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/img_profile_go_donor"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+           android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/baseline_account_circle_black_48"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="2dp" />
+
+    </RelativeLayout>
+
+<ListView
+
+    android:id="@+id/list_of_donors"
+    android:layout_below="@id/heading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</ListView>
+
+</RelativeLayout>
